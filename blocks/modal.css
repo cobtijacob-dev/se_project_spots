@@ -23,19 +23,17 @@
   background-color: #fff;
   padding: 32px 50px;
   position: relative;
-  max-height: 408px;
-  height: 100%;
+  box-sizing: border-box;
 }
 
 .modal__close-btn {
   position: absolute;
   top: 32px;
-  right: 50px;
-  width: 40px;
-  height: 40px;
+  right: 32px;
   opacity: 40%;
   background: transparent;
   outline: none;
+  border: 0px;
 }
 
 .modal__title {
@@ -58,13 +56,15 @@
 .modal__input {
   display: block;
   margin: 8px 0 0;
-  width: 630px;
+  width: 100%;
   height: 52px;
   border-radius: 8px;
   font: Poppins;
   font-size: 20px;
   font-weight: 500;
   line-height: 100%;
+  border-color: rgba(33, 33, 33, 0.4);
+  box-sizing: border-box;
 }
 
 .modal__input::placeholder {
@@ -78,5 +78,45 @@
   padding: 18px 32px 18px 32px;
   gap: 8px;
   background-color: #212121;
-  color: #FCF5E5;
+  color: #fcf5e5;
+}
+
+.modal__close-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.modal__input:hover {
+  border-color: rgba(33, 33, 33, 1);
+}
+
+@media screen and (max-width: 720px) {
+  .modal__container {
+    max-width: 300px;
+    padding: 12px;
+  }
+
+  .modal__label {
+    max-width: 276px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .modal__submit-btn {
+    width: 100%;
+  }
+
+  .modal__input {
+    font-size: 16px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+  }
+
+  .modal__close-btn {
+    top: 4px;
+    right: 0px;
+  }
 }

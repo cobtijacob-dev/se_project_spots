@@ -20,8 +20,9 @@ The way you'll do this at work is by exporting images directly from Figma — we
 
 Good luck and have fun!
 
+Check out https://www.loom.com/share/0bfbd582fa6748de926a87fe33ccf415, where I describe my
+project and some challenges I faced while building it.
 
-Check out https://www.loom.com/share/0bfbd582fa6748de926a87fe33ccf415, where I describe my 
- project and some challenges I faced while building it.
+Deployment link: https://cobtijacob-dev.github.io/se_project_spots/
 
- 
+
