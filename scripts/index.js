@@ -6,18 +6,26 @@ const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+
 editProfileBtn.addEventListener("click", function () {
-  editProfileModal.classList.add("modal_is-opened");
+  openModal(editProfileModal);
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 });
 
 newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  openModal(newPostModal);
 });
 
 newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 });

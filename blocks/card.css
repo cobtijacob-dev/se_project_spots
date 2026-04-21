@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 12px;
 }
 
 .card__like-btn {
@@ -21,7 +22,7 @@
   height: 20px;
   border: none;
   background-color: transparent;
-  opacity: 40%;
+  opacity: 0.6;
 }
 
 .card__title {
@@ -29,7 +30,6 @@
   font-weight: 500;
   font-size: 20px;
   color: #212121;
-  margin: 20px 0 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
