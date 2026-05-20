@@ -44,6 +44,12 @@
   border: none;
   outline: none;
   margin: auto auto 0 0;
+  opacity: 70%;
+  cursor: pointer;
+}
+
+.profile__edit-btn:hover {
+  opacity: 100%;
 }
 
 .profile__add-btn {
@@ -74,6 +80,11 @@
   gap: 8px;
   letter-spacing: 0%;
   display: inline-block;
+  cursor: pointer;
+}
+
+.profile__add-btn:hover {
+  background-color: rgba(33, 33, 33, 0.8)
 }
 
 .profile__add-btn-image {
@@ -118,5 +129,9 @@
     margin-left: 0;
     min-width: 288px;
     width: 100%;
+  }
+
+  .profile__edit-btn {
+    margin: auto 0 0 0;
   }
 }

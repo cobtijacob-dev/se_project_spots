@@ -53,6 +53,8 @@ const newPostDescriptionInput = newPostModal.querySelector(
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
+editProfileFormEl.addEventListener("submit", handleProfileFormSubmit)
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
@@ -90,8 +92,10 @@ function handleProfileFormSubmit(evt) {
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
 
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 }
+
+newPostFormEl.addEventListener("submit", handleAddCardSubmit);
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
@@ -99,5 +103,5 @@ function handleAddCardSubmit(evt) {
   newPostImageLinkEl.textContent = newPostImageLinkInput.value;
   newPostCaptionEl.textContent = newPostCaptionInput.value;
 
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 }

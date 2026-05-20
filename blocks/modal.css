@@ -40,6 +40,11 @@
   background: transparent;
   outline: none;
   border: 0px;
+  cursor: pointer;
+}
+
+.modal__close-btn:hover {
+  opacity: 100%;
 }
 
 .modal__title {
@@ -85,6 +90,11 @@
   gap: 8px;
   background-color: #212121;
   color: #fcf5e5;
+  cursor: pointer;
+}
+
+.modal__submit-btn:hover {
+  background-color: rgba(33, 33, 33, 0.8);
 }
 
 .modal__close-icon {
