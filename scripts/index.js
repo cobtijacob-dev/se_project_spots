@@ -1,7 +1,7 @@
 const initialCards = [
   {
     name: "Golden Gate Bridge",
-    link: " https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
 
   {
@@ -82,7 +82,6 @@ function getCardElement(data) {
   const cardDeleteBtnEl = cardElement.querySelector(".card__delete-btn");
   cardDeleteBtnEl.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
 
   cardImageEl.addEventListener("click", () => {
@@ -130,11 +129,6 @@ newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
-initialCards.forEach(function (card) {
-  console.log(card.name);
-  console.log(card.link);
-});
-
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
 
@@ -150,8 +144,8 @@ function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
   const inputValues = {
-    name: newPostNameInput.value,
-    link: newPostDescriptionInput.value,
+    name: document.querySelector("#card-caption-input").value,
+    link: document.querySelector("#card-image-input").value,
   };
 
   const link = newPostNameInput.value;

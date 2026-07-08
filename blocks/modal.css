@@ -40,7 +40,7 @@
   position: absolute;
   top: 32px;
   right: 32px;
-  opacity: 40%;
+  opacity: 0.4;
   background: transparent;
   outline: none;
   border: 0px;
@@ -102,7 +102,7 @@
   height: 52px;
   border-radius: 8px;
   padding: 18px 32px 18px 32px;
-  gap: 8px;
+  display: flex;
   background-color: #212121;
   color: #fcf5e5;
   cursor: pointer;
@@ -138,11 +138,12 @@
   color: white;
   background-color: rgba(33, 33, 33, 1);
   border-radius: 8px;
-  width: 214px;
-  height: 32px;
+  left: 0;
+  top: calc(100% + 10px);
   padding-top: 8px;
   font-size: larger;
   text-align: center;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 720px) {
@@ -176,7 +177,7 @@
 }
 
 @media screen and (max-width: 627px) {
-  .modal__close_type_preview {
+  .modal__close-btn_type_preview {
     top: -48px;
     right: 0;
   }
