@@ -30,6 +30,7 @@
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  z-index: 10;
 }
 
 .card__delete-btn:hover {

@@ -54,6 +54,8 @@ const newPostNameInput = newPostModal.querySelector("#card-image-input");
 const newPostDescriptionInput = newPostModal.querySelector(
   "#card-caption-input",
 );
+const cardCaptionInput = document.querySelector("#card-caption-input");
+const cardImageInput = document.querySelector("#card-image-input");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
@@ -144,8 +146,8 @@ function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
   const inputValues = {
-    name: document.querySelector("#card-caption-input").value,
-    link: document.querySelector("#card-image-input").value,
+    name: cardCaptionInput.value,
+    link: cardImageInput.value,
   };
 
   const link = newPostNameInput.value;
