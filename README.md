@@ -23,6 +23,6 @@ Good luck and have fun!
 Check out https://www.loom.com/share/0bfbd582fa6748de926a87fe33ccf415, where I describe my
 project and some challenges I faced while building it.
 
+Check out https://www.loom.com/share/5e10e537824d49acb93e6d178b9d3c03, where I describe my new updates to my project and how it has changed.
+
 Deployment link: https://cobtijacob-dev.github.io/se_project_spots/
-
-
