@@ -56,11 +56,11 @@
 }
 
 .modal__close-btn:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .modal__close-btn_type_preview:hover {
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 .modal__title {
@@ -118,7 +118,7 @@
 }
 
 .modal__submit-btn_disabled {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .modal__close-icon {
@@ -134,11 +134,15 @@
   border: 1px solid rgba(255, 0, 0, 0.6);
 }
 
-.modal__error {
+.modal__error-visible {
   display: block;
   color: rgba(255, 0, 0, 0.7);
   font-size: 16px;
   margin-top: 8px;
+}
+
+.modal__error {
+  display: none;
 }
 
 .modal__image-container {

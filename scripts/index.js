@@ -50,10 +50,7 @@ const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 const newPostFormEl = newPostModal.querySelector(".modal__form");
-const newPostNameInput = newPostModal.querySelector("#card-image-input");
-const newPostDescriptionInput = newPostModal.querySelector(
-  "#card-caption-input",
-);
+
 
 const cardSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 const cardCaptionInput = document.querySelector("#card-caption-input");
@@ -103,12 +100,42 @@ const profileDescriptionEl = document.querySelector(".profile__description");
 
 editProfileFormEl.addEventListener("submit", handleProfileFormSubmit);
 
+const activeHandlers = new Map();
+
 function openModal(modal) {
+  if (!modal) return;
   modal.classList.add("modal_is-opened");
+
+  const overlayHandler = function (evt) {
+    if (evt.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
+  };
+
+  const escapeHandler = function (evt) {
+    if (evt.key === "Escape") {
+      closeModal(modal);
+    }
+  };
+
+  activeHandlers.set(modal, { overlayHandler, escapeHandler });
+
+  modal.addEventListener("mousedown", overlayHandler);
+  document.addEventListener("keydown", escapeHandler);
 }
 
 function closeModal(modal) {
+  if (!modal) return;
   modal.classList.remove("modal_is-opened");
+
+  const handlers = activeHandlers.get(modal);
+
+  if (handlers) {
+    modal.removeEventListener("mousedown", handlers.overlayHandler);
+    document.removeEventListener("keydown", handlers.escapeHandler);
+
+    activeHandlers.delete(modal);
+  }
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -156,8 +183,8 @@ function handleAddCardSubmit(evt) {
     link: cardImageInput.value,
   };
 
-  const link = newPostNameInput.value;
-  const title = newPostDescriptionInput.value;
+  const link = cardCaptionInput.value;
+  const title = cardImageInput.value;
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
 
